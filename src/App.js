@@ -12,20 +12,20 @@ export const App = () => {
   const [dogUrl, setDogUrl] = useState(
     'https://images.dog.ceo/breeds/boxer/n02108089_3258.jpg',
   )
+
+  const fetchApi = async () => {
+    const url = await fetch('https://dog.ceo/api/breeds/image/random')
+      .then(response => response.json())
+      .then(data => data.message)
+    return url
+  }
+
   return (
     <>
       <header>Dogアプリ</header>
       <p>犬の画像を表示するサイトです</p>
       <img src={dogUrl} alt="犬の画像" />
-      <button
-        onClick={() =>
-          setDogUrl(
-            'https://images.dog.ceo/breeds/hound-english/n02089973_1132.jpg',
-          )
-        }
-      >
-        更新
-      </button>
+      <button onClick={async () => setDogUrl(await fetchApi())}>更新</button>
     </>
   )
 }
