@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 6rem;
+  background-color: #aad6ec;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.site_description {
+  width: 70%;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_and_button {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 400px;
+}
+
+.dog_image {
+  border-radius: 2rem;
+  height: 90%;
+}
+
+.update_button {
+  width: 25%;
+  margin: 0 auto;
+  color: #5b5b5b;
+  background-color: #fc9d9d;
+  border-radius: 1rem;
+  margin-top: 8px;
+}
+
+.update_button:hover {
+  background-color: #eb6b6b;
+}

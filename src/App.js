@@ -23,9 +23,19 @@ export const App = () => {
   return (
     <>
       <header>Dogアプリ</header>
-      <p>犬の画像を表示するサイトです</p>
-      <img src={dogUrl} alt="犬の画像" />
-      <button onClick={async () => setDogUrl(await fetchApi())}>更新</button>
+      <main>
+        <p className="site_description">犬の画像を表示するサイトです</p>
+        <div className="image_and_button">
+          <img className="dog_image" src={dogUrl} alt="犬の画像" />
+          <button
+            className="update_button"
+            onClick={async () => setDogUrl(await fetchApi())}
+          >
+            更新
+          </button>
+        </div>
+      </main>
+      <hr />
     </>
   )
 }
