@@ -52,3 +52,15 @@ main {
 .update_button:hover {
   background-color: #eb6b6b;
 }
+
+.breeds_section {
+  display: flex;
+  justify-content: center;
+}
+
+.breeds_select {
+  width: 25%;
+  color: gray;
+  font-weight: 600;
+  padding: 0 2rem;
+}
